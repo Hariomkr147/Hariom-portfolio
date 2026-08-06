@@ -10,33 +10,33 @@ const Contact = () => {
           <div className="contact-box">
             <h4>Email</h4>
             <p>
-              <a href="mailto:jyotisinha0526@gmail.com" data-cursor="disable">
-                jyotisinha0526@gmail.com
+              <a href="mailto:hari18525@gmail.com" data-cursor="disable">
+                hari18525@gmail.com
               </a>
             </p>
             <h4>Education</h4>
-            <p>B.Tech in Information Technology</p>
+            <p>BS in Data Science and Applications</p>
           </div>
           <div className="contact-box">
             <h4>Social</h4>
             <a
-              href="https://ctm-log-analyzer.netlify.app/"
+              href="https://github.com/Hariomkr147"
               target="_blank"
               data-cursor="disable"
               className="contact-social"
             >
-              Log Analyzer Demo <MdArrowOutward />
+              GitHub <MdArrowOutward />
             </a>
             <a
-              href="https://www.linkedin.com/feed/update/urn:li:activity:7453443679396003840/"
+              href="https://linkedin.com/in/hariomiitm"
               target="_blank"
               data-cursor="disable"
               className="contact-social"
             >
-              Case Automation <MdArrowOutward />
+              LinkedIn <MdArrowOutward />
             </a>
             <a
-              href="/Jyoti_Sinha_Resume.pdf"
+              href="https://drive.google.com/drive/folders/1jQIXt3y89C6pzk3cU9FFwZpjKxpn7BlU?usp=drive_link"
               target="_blank"
               data-cursor="disable"
               className="contact-social"
@@ -46,7 +46,7 @@ const Contact = () => {
           </div>
           <div className="contact-box">
             <h2>
-              Portfolio for <br /> <span>Jyoti Sinha</span>
+              Portfolio for <br /> <span>Hariom Kumar</span>
             </h2>
             <h5>
               <MdCopyright /> 2026

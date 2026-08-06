@@ -6,7 +6,7 @@ const Career = () => {
       <div className="career-container">
         <h2>
           My career <span>&</span>
-          <br /> experience
+          <br /> education
         </h2>
         <div className="career-info">
           <div className="career-timeline">
@@ -15,44 +15,37 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Associate Software Engineer</h4>
-                <h5>Tech Mahindra</h5>
+                <h4>Class XII (CBSE)</h4>
+                <h5>Vikas Vidyalaya, Begusarai</h5>
               </div>
-              <h3>2010</h3>
+              <h3>2023</h3>
             </div>
             <p>
-              Supported production batch operations, managed incident queues,
-              maintained SLAs, and handled recurring issue RCA for application
-              and backup jobs.
+              Completed higher secondary education.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Control-M Analyst / Consultant</h4>
-                <h5>Capgemini, Atos, Bank of Singapore, UOB</h5>
+                <h4>BS in Data Science and Applications</h4>
+                <h5>Indian Institute of Technology Madras</h5>
               </div>
-              <h3>2014</h3>
+              <h3>2023 - Present</h3>
             </div>
             <p>
-              Led Control-M scheduling, administration, migrations, upgrades,
-              DR checks, workflow design, incident management, and banking
-              production support across Unix, Windows, AIX, and mainframe flows.
+              Pursuing a comprehensive degree program focusing on machine learning, data analysis, statistical analysis, and programming. Expected completion of Diplomas in Data Science and Programming in 2025/2026.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Staff Technical Support Analyst</h4>
-                <h5>BMC Software Asia Pacific</h5>
+                <h4>Backend Developer</h4>
+                <h5>Kartavya (Academic Team Project)</h5>
               </div>
-              <h3>NOW</h3>
+              <h3>Current</h3>
             </div>
             <p>
-              Provide L2/L3 Control-M support, guide enterprise customers on
-              architecture and upgrades, perform RCA, validate fixes in labs,
-              and build AI-driven tools such as Control-M Log Analyzer and
-              Salesforce Case Follow-Up Automation.
+              Designed normalized database tables, implemented geo-proximity complaint routing using the Haversine formula, built backend logic for complaint lifecycles, and collaborated in a Scrum-based GitHub workflow.
             </p>
           </div>
         </div>

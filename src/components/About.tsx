@@ -6,12 +6,7 @@ const About = () => {
       <div className="about-me">
         <h3 className="title">About Me</h3>
         <p className="para">
-          Control-M SME and automation specialist with 15+ years of experience
-          across production support, batch scheduling, infrastructure management,
-          banking operations, and enterprise customer support. I design reliable
-          Control-M workflows, troubleshoot high-pressure production issues, and
-          build automation using shell scripting, Python, VBA, SQL, UiPath, and
-          AI-assisted tools to reduce manual effort and improve response time.
+          Data Science and Applications student at IIT Madras with practical experience in machine learning, data analysis, statistical analysis, data visualization, generative AI, and full-stack web development. Built academic and team projects using Flask, FastAPI, React, Vue.js, SQLite, SQLAlchemy, REST APIs, and GitHub workflows, alongside business analytics work using Excel-based financial modeling and data cleaning. Strong in Python, SQL, feature engineering, database design, backend system development, LLM orchestration, and rapid problem solving. Exposure to generative AI, cloud computing, and text analysis through IIT Madras coursework and workshops.
         </p>
       </div>
     </div>

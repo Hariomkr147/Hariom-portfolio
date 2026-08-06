@@ -1,6 +1,7 @@
 import { FaLinkedinIn } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 import "./styles/SocialIcons.css";
-import { TbActivityHeartbeat, TbMail, TbNotes, TbReportAnalytics } from "react-icons/tb";
+import { TbActivityHeartbeat, TbMail, TbNotes } from "react-icons/tb";
 import { useEffect } from "react";
 import HoverLinks from "./HoverLinks";
 
@@ -55,27 +56,27 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href="https://ctm-log-analyzer.netlify.app/" target="_blank">
-            <TbReportAnalytics />
+          <a href="https://github.com/Hariomkr147" target="_blank">
+            <FaGithub />
           </a>
         </span>
         <span>
-          <a href="https://www.linkedin.com/feed/update/urn:li:activity:7453443679396003840/" target="_blank">
+          <a href="https://linkedin.com/in/hariomiitm" target="_blank">
             <FaLinkedinIn />
           </a>
         </span>
         <span>
-          <a href="/Jyoti_Sinha_Resume.pdf" target="_blank">
+          <a href="https://drive.google.com/drive/folders/1jQIXt3y89C6pzk3cU9FFwZpjKxpn7BlU?usp=drive_link" target="_blank">
             <TbNotes />
           </a>
         </span>
         <span>
-          <a href="mailto:jyotisinha0526@gmail.com">
+          <a href="mailto:hari18525@gmail.com">
             <TbMail />
           </a>
         </span>
       </div>
-      <a className="resume-button" href="/Jyoti_Sinha_Resume.pdf" target="_blank">
+      <a className="resume-button" href="https://drive.google.com/drive/folders/1jQIXt3y89C6pzk3cU9FFwZpjKxpn7BlU?usp=drive_link" target="_blank">
         <HoverLinks text="RESUME" />
         <span>
           <TbActivityHeartbeat />

@@ -79,23 +79,21 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>CONTROL-M</h3>
-              <h4>Enterprise Workload Support</h4>
+              <h3>DATA SCIENCE</h3>
+              <h4>Machine Learning & Analytics</h4>
               <p>
-                Supporting Control-M scheduling, administration, upgrades,
-                migrations, high availability, workflow design, and production
-                troubleshooting across enterprise environments.
+                Building and evaluating machine learning models, executing data preprocessing, feature engineering, and statistical analysis, and creating interactive visualizations.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Control-M</div>
-                <div className="what-tags">L2/L3 Support</div>
-                <div className="what-tags">Batch Scheduling</div>
-                <div className="what-tags">Linux/Unix</div>
-                <div className="what-tags">Windows</div>
-                <div className="what-tags">RCA</div>
-                <div className="what-tags">ITIL</div>
-                <div className="what-tags">AMIGO</div>
+                <div className="what-tags">Pandas</div>
+                <div className="what-tags">NumPy</div>
+                <div className="what-tags">Scikit-learn</div>
+                <div className="what-tags">LightGBM</div>
+                <div className="what-tags">XGBoost</div>
+                <div className="what-tags">Matplotlib</div>
+                <div className="what-tags">Power BI</div>
+                <div className="what-tags">Excel</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -128,23 +126,21 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>AUTOMATION</h3>
-              <h4>AI, Scripting & RPA</h4>
+              <h3>WEB DEVELOPMENT</h3>
+              <h4>Full-Stack & APIs</h4>
               <p>
-                Building practical automations for support teams, from AI log
-                analysis and intelligent case follow-ups to scripts, macros, and
-                UiPath bots that remove repetitive manual work.
+                Developing robust backend APIs with role-based access control, implementing RAG and multi-provider LLM routing, and building responsive frontend interfaces.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Shell</div>
-                <div className="what-tags">Python</div>
-                <div className="what-tags">VBA</div>
-                <div className="what-tags">SQL</div>
-                <div className="what-tags">UiPath</div>
-                <div className="what-tags">OpenAI API</div>
-                <div className="what-tags">Jira</div>
-                <div className="what-tags">ServiceNow</div>
+                <div className="what-tags">Flask</div>
+                <div className="what-tags">FastAPI</div>
+                <div className="what-tags">React</div>
+                <div className="what-tags">Vue.js</div>
+                <div className="what-tags">SQLAlchemy</div>
+                <div className="what-tags">REST APIs</div>
+                <div className="what-tags">SQLite</div>
+                <div className="what-tags">PostgreSQL</div>
               </div>
               <div className="what-arrow"></div>
             </div>

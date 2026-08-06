@@ -16,7 +16,7 @@
       rgba(2, 8, 23, 0.92) 0%,
       rgba(2, 8, 23, 0.48) 48%,
       rgba(2, 8, 23, 0.92) 100%),
-    url("/images/jyoti-bg.jpeg");
+    url("/images/home-bg.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.72;

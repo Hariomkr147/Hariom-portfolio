@@ -5,34 +5,28 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "Control-M Log Analyzer",
-    category: "AI-Powered Log Analysis",
-    tools: "React, Node.js, OpenAI API, Prompt Engineering",
-    image: "/images/log-analyzer.jpeg",
+    title: "Gyantra",
+    category: "LLM Orchestration & RAG",
+    tools: "FastAPI, React, Vite, Gemini, Groq, OpenRouter",
+    image: "/images/gyantra.png",
   },
   {
-    title: "Salesforce Case Follow-Up Automation",
-    category: "AI-Driven Support Automation",
-    tools: "Python, SMTP, Salesforce Case Monitoring, SLA Workflows",
-    image: "/images/case-followup.jpeg",
+    title: "Cinema Audience Forecasting",
+    category: "Machine Learning Model",
+    tools: "Python, NumPy, Pandas, Matplotlib, Scikit-learn",
+    image: "/images/cinema-forecasting.png",
   },
   {
-    title: "Control-M Enterprise Support",
-    category: "Production & Application L3 Support",
-    tools: "Control-M, Linux, Unix, Windows, RCA, AMIGO, Sizing",
-    image: "/images/jyoti-bg.jpeg",
+    title: "Placement Portal",
+    category: "Full-Stack Web App",
+    tools: "Flask, Vue.js, SQLite, REST APIs",
+    image: "/images/placement-portal.png",
   },
   {
-    title: "Banking Batch Automation",
-    category: "Workflow Design & Operations",
-    tools: "Shell, Batch, VBA Macros, SQL, ITSM, DR Validation",
-    image: "/images/bmc-banking.png",
-  },
-  {
-    title: "RPA Banking Operations",
-    category: "UiPath Automation",
-    tools: "UiPath Studio, Robot, Orchestrator, BRD, PDD, SDD",
-    image: "/images/rpa-banking.png",
+    title: "BDM Capstone",
+    category: "Business Analytics",
+    tools: "Excel, Financial Analysis, Data Cleaning",
+    image: "/images/bdm-capstone.png",
   },
 ];
 
