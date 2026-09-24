@@ -1,60 +1,55 @@
 import { MdArrowOutward, MdCopyright } from "react-icons/md";
 import "./styles/Contact.css";
+import { links } from "../data/profile";
+
+const socials = [
+  { label: "GitHub", href: links.github },
+  { label: "LinkedIn", href: links.linkedin },
+  { label: "Resume", href: links.resume },
+];
 
 const Contact = () => {
   return (
-    <div className="contact-section section-container" id="contact">
+    <section className="contact-section section-container" id="contact">
       <div className="contact-container">
         <h3>Contact</h3>
         <div className="contact-flex">
           <div className="contact-box">
             <h4>Email</h4>
             <p>
-              <a href="mailto:hari18525@gmail.com" data-cursor="disable">
-                hari18525@gmail.com
+              <a href={`mailto:${links.email}`} data-cursor="disable">
+                {links.email}
               </a>
             </p>
-            <h4>Education</h4>
-            <p>BS in Data Science and Applications</p>
+            <h4>Location</h4>
+            <p>Begusarai, Bihar · Open to remote</p>
           </div>
           <div className="contact-box">
             <h4>Social</h4>
-            <a
-              href="https://github.com/Hariomkr147"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              GitHub <MdArrowOutward />
-            </a>
-            <a
-              href="https://linkedin.com/in/hariomiitm"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              LinkedIn <MdArrowOutward />
-            </a>
-            <a
-              href="https://drive.google.com/drive/folders/1jQIXt3y89C6pzk3cU9FFwZpjKxpn7BlU?usp=drive_link"
-              target="_blank"
-              data-cursor="disable"
-              className="contact-social"
-            >
-              Resume <MdArrowOutward />
-            </a>
+            {socials.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cursor="disable"
+                className="contact-social"
+              >
+                {s.label} <MdArrowOutward />
+              </a>
+            ))}
           </div>
           <div className="contact-box">
             <h2>
-              Portfolio for <br /> <span>Hariom Kumar</span>
+              Designed & built by <br /> <span>Hariom Kumar</span>
             </h2>
             <h5>
-              <MdCopyright /> 2026
+              <MdCopyright /> {new Date().getFullYear()}
             </h5>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -8,7 +8,7 @@ const WhatIDo = () => {
   };
 
   return (
-    <div className="whatIDO">
+    <section className="whatIDO" aria-label="What I do">
       <div className="what-box">
         <h2 className="title">
           W<span className="hat-h2">HAT</span>
@@ -79,21 +79,22 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DATA SCIENCE</h3>
-              <h4>Machine Learning & Analytics</h4>
+              <h3>GENERATIVE AI</h3>
+              <h4>LLM Apps, RAG & Evaluation</h4>
               <p>
-                Building and evaluating machine learning models, executing data preprocessing, feature engineering, and statistical analysis, and creating interactive visualizations.
+                Designing multi-stage LLM pipelines and RAG systems, grounding them in real data, and measuring every prompt or validator change on fixed evaluation sets for quality and token cost.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Pandas</div>
-                <div className="what-tags">NumPy</div>
+                <div className="what-tags">LangChain</div>
+                <div className="what-tags">RAG</div>
+                <div className="what-tags">FAISS</div>
+                <div className="what-tags">Prompt Engineering</div>
+                <div className="what-tags">LLM Evaluation</div>
+                <div className="what-tags">Gemini</div>
+                <div className="what-tags">OpenRouter</div>
+                <div className="what-tags">Hugging Face</div>
                 <div className="what-tags">Scikit-learn</div>
-                <div className="what-tags">LightGBM</div>
-                <div className="what-tags">XGBoost</div>
-                <div className="what-tags">Matplotlib</div>
-                <div className="what-tags">Power BI</div>
-                <div className="what-tags">Excel</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -126,28 +127,29 @@ const WhatIDo = () => {
             </div>
             <div className="what-corner"></div>
             <div className="what-content-in">
-              <h3>WEB DEVELOPMENT</h3>
-              <h4>Full-Stack & APIs</h4>
+              <h3>FULL-STACK</h3>
+              <h4>APIs, Web Apps & Data</h4>
               <p>
-                Developing robust backend APIs with role-based access control, implementing RAG and multi-provider LLM routing, and building responsive frontend interfaces.
+                Building FastAPI and Flask backends with RBAC and Server-Sent Events, normalised PostgreSQL schemas, and React, Next.js or Vue frontends, containerised with Docker.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
-                <div className="what-tags">Flask</div>
                 <div className="what-tags">FastAPI</div>
+                <div className="what-tags">Flask</div>
                 <div className="what-tags">React</div>
+                <div className="what-tags">Next.js</div>
                 <div className="what-tags">Vue.js</div>
-                <div className="what-tags">SQLAlchemy</div>
-                <div className="what-tags">REST APIs</div>
-                <div className="what-tags">SQLite</div>
+                <div className="what-tags">Tailwind CSS</div>
                 <div className="what-tags">PostgreSQL</div>
+                <div className="what-tags">SQLAlchemy</div>
+                <div className="what-tags">Docker</div>
               </div>
               <div className="what-arrow"></div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

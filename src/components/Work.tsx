@@ -1,34 +1,8 @@
 import { useState, useCallback } from "react";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
-import { MdArrowBack, MdArrowForward } from "react-icons/md";
-
-const projects = [
-  {
-    title: "Gyantra",
-    category: "LLM Orchestration & RAG",
-    tools: "FastAPI, React, Vite, Gemini, Groq, OpenRouter",
-    image: "/images/gyantra.png",
-  },
-  {
-    title: "Cinema Audience Forecasting",
-    category: "Machine Learning Model",
-    tools: "Python, NumPy, Pandas, Matplotlib, Scikit-learn",
-    image: "/images/cinema-forecasting.png",
-  },
-  {
-    title: "Placement Portal",
-    category: "Full-Stack Web App",
-    tools: "Flask, Vue.js, SQLite, REST APIs",
-    image: "/images/placement-portal.png",
-  },
-  {
-    title: "BDM Capstone",
-    category: "Business Analytics",
-    tools: "Excel, Financial Analysis, Data Cleaning",
-    image: "/images/bdm-capstone.png",
-  },
-];
+import { projects, otherWork } from "../data/profile";
+import { MdArrowBack, MdArrowForward, MdArrowOutward } from "react-icons/md";
 
 const Work = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -57,7 +31,7 @@ const Work = () => {
   }, [currentIndex, goToSlide]);
 
   return (
-    <div className="work-section" id="work">
+    <section className="work-section" id="work">
       <div className="work-container section-container">
         <h2>
           My <span>Work</span>
@@ -91,25 +65,42 @@ const Work = () => {
               }}
             >
               {projects.map((project, index) => (
-                <div className="carousel-slide" key={index}>
+                <div
+                  className="carousel-slide"
+                  key={project.title}
+                  aria-hidden={index !== currentIndex}
+                >
                   <div className="carousel-content">
                     <div className="carousel-info">
                       <div className="carousel-number">
-                        <h3>0{index + 1}</h3>
+                        <h3>{String(index + 1).padStart(2, "0")}</h3>
                       </div>
                       <div className="carousel-details">
                         <h4>{project.title}</h4>
                         <p className="carousel-category">
                           {project.category}
                         </p>
+                        <p className="carousel-summary">{project.summary}</p>
                         <div className="carousel-tools">
                           <span className="tools-label">Tools & Features</span>
                           <p>{project.tools}</p>
                         </div>
+                        {project.link && (
+                          <a
+                            className="carousel-link"
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-cursor="disable"
+                            tabIndex={index === currentIndex ? 0 : -1}
+                          >
+                            View on GitHub <MdArrowOutward />
+                          </a>
+                        )}
                       </div>
                     </div>
                     <div className="carousel-image-wrapper">
-                      <WorkImage image={project.image} alt={project.title} />
+                      <WorkImage image={project.image} alt={`${project.title} screenshot`} title={project.title} link={project.link} />
                     </div>
                   </div>
                 </div>
@@ -131,8 +122,31 @@ const Work = () => {
             ))}
           </div>
         </div>
+
+        <div className="other-work">
+          <h3>Other work</h3>
+          <ul>
+            {otherWork.map((item) => (
+              <li key={item.title}>
+                <div>
+                  <h4>
+                    {item.link ? (
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" data-cursor="disable">
+                        {item.title} <MdArrowOutward />
+                      </a>
+                    ) : (
+                      item.title
+                    )}
+                  </h4>
+                  <p>{item.summary}</p>
+                </div>
+                <span>{item.category}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

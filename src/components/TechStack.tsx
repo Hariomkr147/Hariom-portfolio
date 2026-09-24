@@ -9,26 +9,16 @@ import {
   CylinderCollider,
   RapierRigidBody,
 } from "@react-three/rapier";
+import { techStack } from "../data/profile";
 
 const textureLoader = new THREE.TextureLoader();
-const imageUrls = [
-  "/images/python.svg",
-  "/images/java.svg",
-  "/images/fastapi.svg",
-  "/images/flask.svg",
-  "/images/react-new.svg",
-  "/images/vue.svg",
-  "/images/pandas.svg",
-  "/images/docker.svg",
-  "/images/postgresql.svg",
-  "/images/javascript.webp",
-];
-const textures = imageUrls.map((url) => textureLoader.load(url));
+const textures = techStack.map(({ icon }) => textureLoader.load(icon));
 
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
 
 const spheres = [...Array(30)].map(() => ({
   scale: [0.7, 1, 0.8, 1, 1][Math.floor(Math.random() * 5)],
+  materialIndex: Math.floor(Math.random() * techStack.length),
 }));
 
 type SphereProps = {
@@ -134,19 +124,20 @@ const TechStack = () => {
         .getBoundingClientRect().top;
       setIsActive(scrollY > threshold);
     };
-    document.querySelectorAll(".header a").forEach((elem) => {
-      const element = elem as HTMLAnchorElement;
-      element.addEventListener("click", () => {
-        const interval = setInterval(() => {
-          handleScroll();
-        }, 10);
-        setTimeout(() => {
-          clearInterval(interval);
-        }, 1000);
-      });
-    });
+    // Nav jumps move the page without scroll events, so poll briefly after a nav click.
+    let poll: number | undefined;
+    const onNavClick = () => {
+      clearInterval(poll);
+      poll = window.setInterval(handleScroll, 10);
+      setTimeout(() => clearInterval(poll), 1000);
+    };
+    const navLinks = document.querySelectorAll(".header a");
+    navLinks.forEach((link) => link.addEventListener("click", onNavClick));
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => {
+      clearInterval(poll);
+      navLinks.forEach((link) => link.removeEventListener("click", onNavClick));
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -167,7 +158,7 @@ const TechStack = () => {
 
   return (
     <div className="techstack">
-      <h2> My Techstack</h2>
+      <h2>My Techstack</h2>
 
       <Canvas
         dpr={[1, 1.5]}
@@ -186,11 +177,11 @@ const TechStack = () => {
         <directionalLight position={[0, 5, -4]} intensity={2} />
         <Physics gravity={[0, 0, 0]}>
           <Pointer isActive={isActive} />
-          {spheres.map((props, i) => (
+          {spheres.map(({ scale, materialIndex }, i) => (
             <SphereGeo
               key={i}
-              {...props}
-              material={materials[Math.floor(Math.random() * materials.length)]}
+              scale={scale}
+              material={materials[materialIndex]}
               isActive={isActive}
             />
           ))}

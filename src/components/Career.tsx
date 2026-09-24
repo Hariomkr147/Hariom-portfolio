@@ -1,8 +1,29 @@
 import "./styles/Career.css";
 
+const timeline = [
+  {
+    role: "AI Engineer",
+    org: "Adhyay AI Pvt. Ltd. · Remote",
+    date: "NOW",
+    text: "Since Sep 2026. Building Prayog, an LLM simulation generator for school science. Prototyped a teacher–student LLM pipeline grounded in NCERT data with an A/B harness for quality and token cost. Also making the Next.js app bilingual (i18n) and building AI video generation for lessons.",
+  },
+  {
+    role: "Diplomas in Data Science & Programming",
+    org: "Indian Institute of Technology Madras",
+    date: "2026",
+    text: "Diploma in Data Science (Dec 2025) and Diploma in Programming and Application Development (May 2026).",
+  },
+  {
+    role: "BS in Data Science and Applications",
+    org: "Indian Institute of Technology Madras",
+    date: "2023",
+    text: "2023 – present. Coursework in Machine Learning, Deep Learning, Software Engineering, DBMS, and Data Structures & Algorithms.",
+  },
+];
+
 const Career = () => {
   return (
-    <div className="career-section section-container">
+    <section className="career-section section-container">
       <div className="career-container">
         <h2>
           My career <span>&</span>
@@ -12,45 +33,21 @@ const Career = () => {
           <div className="career-timeline">
             <div className="career-dot"></div>
           </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Class XII (CBSE)</h4>
-                <h5>Vikas Vidyalaya, Begusarai</h5>
+          {timeline.map((item) => (
+            <div className="career-info-box" key={item.role}>
+              <div className="career-info-in">
+                <div className="career-role">
+                  <h4>{item.role}</h4>
+                  <h5>{item.org}</h5>
+                </div>
+                <h3>{item.date}</h3>
               </div>
-              <h3>2023</h3>
+              <p>{item.text}</p>
             </div>
-            <p>
-              Completed higher secondary education.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>BS in Data Science and Applications</h4>
-                <h5>Indian Institute of Technology Madras</h5>
-              </div>
-              <h3>2023 - Present</h3>
-            </div>
-            <p>
-              Pursuing a comprehensive degree program focusing on machine learning, data analysis, statistical analysis, and programming. Expected completion of Diplomas in Data Science and Programming in 2025/2026.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Backend Developer</h4>
-                <h5>Kartavya (Academic Team Project)</h5>
-              </div>
-              <h3>Current</h3>
-            </div>
-            <p>
-              Designed normalized database tables, implemented geo-proximity complaint routing using the Haversine formula, built backend logic for complaint lifecycles, and collaborated in a Scrum-based GitHub workflow.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
