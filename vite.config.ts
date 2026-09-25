@@ -5,15 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          three: ['three', '@react-three/fiber', '@react-three/drei', '@react-three/rapier'],
-          gsap: ['gsap', 'gsap-trial']
-        }
-      }
-    },
-    chunkSizeWarningLimit: 1000
-  }
+    // The TechStack chunk (three + rapier physics WASM) is ~2.3 MB but lazy-loaded on scroll.
+    chunkSizeWarningLimit: 2500,
+  },
 });

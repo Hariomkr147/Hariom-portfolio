@@ -41,6 +41,7 @@
 }
 
 .carousel-slide {
+  width: 100%;
   min-width: 100%;
   flex-shrink: 0;
   box-sizing: border-box;
@@ -56,6 +57,7 @@
 
 .carousel-info {
   flex: 1;
+  min-width: 0;
   display: flex;
   gap: 30px;
   align-items: flex-start;
@@ -73,6 +75,8 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  flex: 1;
+  min-width: 0;
 }
 
 .carousel-details h4 {
@@ -109,6 +113,7 @@
 
 .carousel-image-wrapper {
   flex: 1;
+  min-width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,14 +222,103 @@
   opacity: 1;
 }
 
-.work-image video {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: #000;
-  object-fit: cover;
+.work-placeholder {
+  width: min(560px, 80vw);
+  aspect-ratio: 16 / 10;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid rgba(94, 234, 212, 0.25);
+  background:
+    radial-gradient(circle at 25% 20%, rgba(94, 234, 212, 0.22), transparent 55%),
+    radial-gradient(circle at 80% 85%, rgba(34, 211, 238, 0.16), transparent 50%),
+    #0f1522;
+}
+
+.work-placeholder span {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #eae5ec;
+}
+
+/* ── Project copy & links ── */
+.carousel-summary {
+  margin: 10px 0 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #d4d0d6;
+  max-width: 520px;
+}
+
+.carousel-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  width: fit-content;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accentColor);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+
+.other-work {
+  margin-top: 70px;
+}
+
+.other-work h3 {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  margin: 0 0 10px;
+}
+
+.other-work ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.other-work li {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 20px 0;
+  border-bottom: 1px solid #363636;
+}
+
+.other-work h4 {
+  margin: 0 0 4px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.other-work h4 a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.other-work p {
+  margin: 0;
+  font-weight: 300;
+  color: #adacac;
+}
+
+.other-work li > span {
+  font-size: 14px;
+  color: #adacac;
+  white-space: nowrap;
 }
 
 .work-image img {
@@ -288,6 +382,10 @@
     width: 40px;
     height: 40px;
     font-size: 18px;
+    /* Sit beside the dots instead of on top of the project text */
+    top: auto;
+    bottom: -15px;
+    transform: none;
   }
 
   .carousel-arrow-left {
@@ -327,5 +425,18 @@
 
   .work-image img {
     max-height: 250px;
+  }
+
+  .work-placeholder span {
+    font-size: 28px;
+  }
+
+  .other-work li {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .other-work li > span {
+    white-space: normal;
   }
 }
